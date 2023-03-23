@@ -7,6 +7,7 @@ const app = express()
 
 app.engine('hbs', engine({ defaultLayout: 'main', extname: '.hbs' }))
 app.set('view engine', 'hbs')
+app.use(express.static('public'))
 app.use(routes)
 
 app.listen(3000, () => {

@@ -1,0 +1,11 @@
+body {
+  font-family: 'Noto Sans TC', sans-serif;
+}
+
+.form-control::placeholder {
+  color: #C0C0C0;
+}
+
+.btn-login-submit {
+  box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
+}
