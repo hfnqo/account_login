@@ -12,7 +12,11 @@ router.post('/', (req, res) => {
 
   Account.findOne({ email: email, password: password })
     .lean()
-    .then(account => res.render('welcome', { account }))
+    .then(account => {
+      if (!account) res.render('error')
+      
+      res.render('welcome', { account })
+    })
     .catch(error => console.log(error))
 })
 
